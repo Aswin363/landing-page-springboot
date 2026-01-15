@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR (same as landing page for consistency) -->
+<nav class="navbar">
+    <div class="logo">MyWebsite</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you. Please fill out the form below.</p>
+
+        <form action="/contact" method="post" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 MyWebsite. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
