@@ -1,10 +1,10 @@
 package com.example.demo;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class ContactController {
 
     @PostMapping("/contact")
@@ -17,6 +17,7 @@ public class ContactController {
         System.out.println("Email: " + email);
         System.out.println("Message: " + message);
 
-        return "Form submitted successfully!";
+        // SAME PAGE redirect with success flag
+        return "redirect:/contact.html?success=true";
     }
 }
