@@ -1,3 +1,5 @@
-document.querySelector(".btn").addEventListener("click", () => {
-    alert("Thank you for booking your yoga session 🧘‍♀️");
-});
+const params = new URLSearchParams(window.location.search);
+
+if (params.get("success") === "true") {
+    document.getElementById("successMsg").style.display = "block";
+}
