@@ -5,7 +5,7 @@
     font-family: Arial, sans-serif;
 }
 
-/* NAVBAR */
+
 .navbar {
     width:100%;
     height: 70px;
@@ -45,7 +45,7 @@
     color: #00c6ff;
 }
 
-/* HERO */
+
 .hero {
     height: 100vh;
     background: linear-gradient(to right, #00c6ff, #0072ff);
@@ -81,7 +81,7 @@
     background: #f1f1f1;
 }
 
-/* SECTIONS */
+
 .section {
     padding: 80px 60px;
     text-align: center;
@@ -99,14 +99,14 @@
     line-height: 1.6;
 }
 
-/* FOOTER */
+
 footer {
     background: #222;
     color: white;
     text-align: center;
     padding: 15px;
 }
-/* CONTACT PAGE */
+
 .contact-section {
     min-height: 100vh;
     background: linear-gradient(to right, #00c6ff, #0072ff);
@@ -167,7 +167,7 @@ footer {
     background: #005ad5;
 }
 
-/* MOBILE RESPONSIVE */
+
 @media (max-width: 600px) {
     .contact-container {
         padding: 25px;
