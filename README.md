@@ -14,67 +14,68 @@ The backend is built using Java Spring Boot, which handles form submissions usin
 ---
 
 ## Tech Stack
-- HTML
-- CSS
-- Java
-- Spring Boot
-- Maven
+- HTML  
+- CSS  
+- Java  
+- Spring Boot  
+- Maven  
 
 ---
 
 ## Features
-- Modern landing page UI
-- Contact form with Name, Email, and Message
-- Spring Boot backend integration
-- POST request handling using Controller
-- Console output for submitted form data
-- Success page redirect after form submission
+- Modern and responsive landing page UI  
+- Contact form with Name, Email, and Message fields  
+- Backend integration using Spring Boot  
+- POST request handling via Controller  
+- Console logging of submitted form data  
+- Success message displayed on the same contact page after form submission  
 
 ---
 
 ## Project Structure
-## Project Structure
 - `src/main/java/com/example/demo/`
-  - `DemoApplication.java` – Spring Boot application entry point
-  - `ContactController.java` – Handles contact form POST requests
+  - `DemoApplication.java` – Spring Boot application entry point  
+  - `ContactController.java` – Handles contact form POST requests  
 
 - `src/main/resources/static/`
-  - `index.html` – Landing page
-  - `contact.html` – Contact form page
-  - `success.html` – Success page after form submission
-  - `style.css` – Styling for the frontend
-  - `script.js` – Client-side scripting
-  - `easy-service.png` – Logo / image asset
+  - `index.html` – Landing page  
+  - `contact.html` – Contact form page  
+  - `style.css` – Styling for the frontend  
+  - `script.js` – Client-side scripting  
+  - `easy-service.png` – Image asset  
 
 - `src/main/resources/`
-  - `application.properties` – Application configuration
+  - `application.properties` – Application configuration  
 
-- `pom.xml` – Maven dependencies and project configuration
+- `pom.xml` – Maven dependencies and project configuration  
+
+---
+
 ## How to Run the Project
-1. Clone the repository
-2. Open the project in an IDE (IntelliJ / Eclipse / VS Code)
-3. Run `DemoApplication.java`
-4. Open a browser and visit:
-   http://localhost:8080
+1. Clone the repository  
+2. Open the project in an IDE (IntelliJ IDEA / Eclipse / VS Code)  
+3. Run `DemoApplication.java`  
+4. Open a browser and visit:  
+http://localhost:8080/
 
 ---
 
 ## Output
-- Landing page loads successfully
-- Contact form accepts user input
-- Form data is submitted using POST request
-- Submitted data is printed in the Spring Boot console
-- User is redirected to a success page after submission
+- Landing page loads successfully  
+- Contact form accepts user input  
+- Form data is submitted using a POST request  
+- Submitted data is printed in the Spring Boot console  
+- Success message is displayed on the same contact page  
 
 ---
 
 ## Learning Outcome
-- Understanding of frontend and backend integration
-- Hands-on experience with Spring Boot controllers
-- Practical knowledge of POST request handling
-- Improved understanding of full-stack application workflow
+- Understanding frontend and backend integration  
+- Hands-on experience with Spring Boot controllers  
+- Practical knowledge of POST request handling  
+- Improved understanding of full-stack application workflow  
 
 ---
-## Author
-Aswin Sahu
 
+## Author
+**Aswini Sahu**
