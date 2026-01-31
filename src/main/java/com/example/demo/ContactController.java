@@ -1,22 +1,23 @@
 package com.example.demo;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin // frontend allow
 public class ContactController {
 
-    @PostMapping("/contact")
-    public String handleContact(
-            @RequestParam String name,
-            @RequestParam String email,
-            @RequestParam String message) {
+    @Autowired
+    private ContactRepository repo;
 
-        System.out.println("Name: " + name);
-        System.out.println("Email: " + email);
-        System.out.println("Message: " + message);
+    @PostMapping("/submit")
+    public Contact saveContact(@RequestBody Contact contact) {
+        return repo.save(contact);
+    }
 
-        return "Form submitted successfully!";
+    @GetMapping("/contacts")
+    public List<Contact> getAllContacts() {
+        return repo.findAll();
     }
 }

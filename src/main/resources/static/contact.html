@@ -7,7 +7,6 @@
 </head>
 <body>
 
-<!-- NAVBAR (same as landing page for consistency) -->
 <nav class="navbar">
     <div class="logo">MyWebsite</div>
     <ul class="nav-links">
@@ -18,16 +17,19 @@
     </ul>
 </nav>
 
-<!-- CONTACT SECTION -->
 <section class="contact-section">
     <div class="contact-container">
         <h1>Contact Us</h1>
         <p>We’d love to hear from you. Please fill out the form below.</p>
 
-        <form action="/contact" method="post" class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
+        <div id="successMsg" style="display:none; color:green; margin-bottom:15px;">
+            ✅ Message sent successfully!
+        </div>
+
+        <form id="contactForm" class="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </div>
@@ -36,6 +38,34 @@
 <footer>
     <p>© 2026 MyWebsite. All Rights Reserved.</p>
 </footer>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const data = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value
+        };
+
+        fetch("http://localhost:8080/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(result => {
+                document.getElementById("successMsg").style.display = "block";
+                document.getElementById("contactForm").reset();
+            })
+            .catch(error => {
+                alert("Error saving data");
+            });
+    });
+</script>
 
 </body>
 </html>
